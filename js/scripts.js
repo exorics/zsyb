@@ -40,7 +40,6 @@
 
     //Flexislider for testimonials
     if ($('.flexslider').length != 0) {
-        console.log(11111);
         $('.flexslider').flexslider({
             manualControls: '.flex-manual .switch',
             nextText: "",
@@ -107,12 +106,12 @@
     });
 
     /* Ensures after hide modal content is removed. */
-    $('#globalModal').on('hidden.bs.modal', function (e) {
-        $(this).removeData('bs.modal');
+    // $('#connectToUsModal').on('hidden.bs.modal', function (e) {
+    //     $(this).removeData('bs.modal');
 
-        // just close modal and reset modal content to default (shows the loader)
-        $(this).html('<div class="modal-dialog"><div class="modal-content"><div class="modal-body"><div class="loader"></div></div></div></div>');
-    });
+    //     // just close modal and reset modal content to default (shows the loader)
+    //     $(this).html('<div class="modal-dialog"><div class="modal-content"><div class="modal-body"><div class="loader"></div></div></div></div>');
+    // });
 
     $('li.dropdown').mouseover(function() {
         $(this).addClass('open');
