@@ -52,19 +52,6 @@
     }
     ;
 
-    // Headhesive init
-    var options = {// set options
-        offset: '#showHere',
-        classes: {
-            clone: 'fixmenu-clone',
-            stick: 'fixmenu-stick',
-            unstick: 'fixmenu-unstick'
-        }
-    };
-
-    if ($('#registration').length == 0) {
-        var fixmenu = new Headhesive('.navigation-header', options); // init
-    }
 
     // Navigation Scroll
     $('.navigation-bar').onePageNav({
@@ -118,67 +105,6 @@
         return false;
     });
 
-    // count down timer
-    var futureDate = new Date();
-    // count down 10 days from today
-    futureDate.setDate(futureDate.getDate() + 10);
-    // or set specific date in the future
-    // futureDate = new Date(2014, 7, 26);
-    $('.countdown').countdown({
-        until: futureDate,
-        compact: true,
-        padZeroes: true,
-        layout: $('.countdown').html()
-    });
-
-    // Form validation - sign up
-    toastr.options = {"positionClass": "toast-top-full-width"};
-    if ($('.form-register').length) {
-        $('.form-register').validate({
-            rules: {
-                password: {
-                    minlength: 5
-                },
-                confirmPassword: {
-                    minlength: 5,
-                    equalTo: "#password"
-                }
-            },
-            messages: {
-                fullname: "Please enter your fullname",
-                password: {
-                    required: "Please provide a password",
-                    minlength: "Your password must be at least 5 characters long"
-                },
-                confirmPassword: {
-                    required: "Please provide a password",
-                    minlength: "Your password must be at least 5 characters long",
-                    equalTo: "Please enter the same password as above"
-                },
-                email: "Please enter a valid email address"
-            },
-            submitHandler: function (form) {
-                var $this = $(form);
-                $.ajax({
-                    url: $this.attr('action'),
-                    type: 'POST',
-                    data: $this.serialize(),
-                })
-                        .done(function (msg) {
-                            if (msg == 'ok') {
-                                toastr.success('Thank you for signing up.');
-                                $this[0].reset();
-                            } else {
-                                toastr.error('An error occured. Please try again later.');
-                            }
-                        })
-                        .fail(function () {
-                            toastr.error('An error occured. Please try again later.');
-                        });
-            }
-        });
-    }
-
     /* Ensures after hide modal content is removed. */
     $('#globalModal').on('hidden.bs.modal', function (e) {
         $(this).removeData('bs.modal');
@@ -187,8 +113,11 @@
         $(this).html('<div class="modal-dialog"><div class="modal-content"><div class="modal-body"><div class="loader"></div></div></div></div>');
     });
 
-    $('.lang-dropdown').change(function () {
-        window.location = $(this).val();
+    $('li.dropdown').mouseover(function() {
+        $(this).addClass('open');
+    }).mouseout(function() {
+        $(this).removeClass('open');
     });
 
 })();
+
