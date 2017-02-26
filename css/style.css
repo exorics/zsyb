@@ -1711,16 +1711,6 @@ blockquote:after {
     padding: 10px 0px 0px 0px;
 }
 
-/* Testimonials slider */
-.flexslider {
-    margin-bottom: 30px;
-}
-
-.flexslider ul, ol {
-    list-style: none;
-    padding: 0;
-}
-
 .flex-manual .wrap {
     padding: 0px;
 }
@@ -2617,6 +2607,8 @@ label {
 
 .dropdown-menu {
     border: none;
+    padding: 0px 0;
+    margin: 0px 0 0;
 }
 
 .label-info {

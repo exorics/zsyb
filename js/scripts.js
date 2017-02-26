@@ -39,13 +39,14 @@
     });
 
     //Flexislider for testimonials
-    if ($('.testimonials-slider').length != 0) {
-        $('.testimonials-slider').flexslider({
+    if ($('.flexslider').length != 0) {
+        console.log(11111);
+        $('.flexslider').flexslider({
             manualControls: '.flex-manual .switch',
             nextText: "",
             prevText: "",
             startAt: 1,
-            slideshow: false,
+            slideshow: true,
             direction: "horizontal",
             animation: "slide"
         });
@@ -54,13 +55,13 @@
 
 
     // Navigation Scroll
-    $('.navigation-bar').onePageNav({
-        currentClass: 'active',
-        changeHash: true,
-        scrollSpeed: 750,
-        scrollThreshold: 0.5,
-        easing: 'swing'
-    });
+    // $('.navigation-bar').onePageNav({
+    //     currentClass: 'active',
+    //     changeHash: true,
+    //     scrollSpeed: 750,
+    //     scrollThreshold: 0.5,
+    //     easing: 'swing'
+    // });
 
     // Animated Appear Element
     if (app.el['window'].width() > 1024) {
