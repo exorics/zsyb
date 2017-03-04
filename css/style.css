@@ -4739,3 +4739,7 @@ h4.media-heading small {
 #download-table > tbody > tr > td > .btn {
     margin-bottom: 0px;
 }
+
+.left {
+    text-align: left;
+}
