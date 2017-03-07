@@ -39,18 +39,18 @@
     });
 
     //Flexislider for testimonials
-    if ($('.flexslider').length != 0) {
-        $('.flexslider').flexslider({
-            manualControls: '.flex-manual .switch',
-            nextText: "",
-            prevText: "",
-            startAt: 1,
-            slideshow: true,
-            direction: "horizontal",
-            animation: "slide"
-        });
-    }
-    ;
+    // if ($('.flexslider').length != 0) {
+    //     $('.flexslider').flexslider({
+    //         manualControls: '.flex-manual .switch',
+    //         nextText: "",
+    //         prevText: "",
+    //         startAt: 1,
+    //         slideshow: true,
+    //         direction: "horizontal",
+    //         animation: "slide"
+    //     });
+    // }
+    // ;
 
 
     // Navigation Scroll
