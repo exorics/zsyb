@@ -147,7 +147,7 @@
 			if(!$parent.hasClass(self.config.currentClass)) {
 				//Start callback
 				if(self.config.begin) {
-					self.config.begin();
+					self.config.begin(e);
 				}
 
 				//Change the highlighted nav item
@@ -168,7 +168,7 @@
 
 					//End callback
 					if(self.config.end) {
-						self.config.end();
+						self.config.end(e);
 					}
 				});
 			}
