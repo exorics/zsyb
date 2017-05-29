@@ -34,14 +34,14 @@
     });
 
 
-    // Navigation Scroll
+    // Navigation Scrolls
     $('.navigation-bar').onePageNav({
         currentClass: 'active',
         changeHash: true,
         scrollSpeed: 750,
         scrollThreshold: 0.5,
         easing: 'swing',
-        filter: '.navigation-navbar a',
+        filter: ':not(a[href="#"])',
         begin: function(e) {
             //I get fired when the animation is starting
             var url = e.target.href.toString();
